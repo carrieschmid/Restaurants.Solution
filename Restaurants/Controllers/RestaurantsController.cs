@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
 namespace Restaurant.Controllers
 {
@@ -15,11 +16,37 @@ namespace Restaurant.Controllers
     {
       _db = db;
     }
-     public ActionResult Index()
+
+      [HttpPost]
+      public ActionResult Index(string restaurantDescription)
         {
             List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 
+
+ 
+            if (!String.IsNullOrEmpty(restaurantDescription)) 
+            { 
+                model = model.Where(s => s.Description.Contains(restaurantDescription)).Select(s => s).ToList(); 
+            }
+
             return View(model);
+          
+
         }
+
+
+        [HttpGet]
+        public ActionResult Index()
+        {
+            List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 
+
+         
+            return View(model);
+          
+
+        }
+
+
+
         public ActionResult Create()
         {
             ViewBag.CuisinesId = new SelectList(_db.Cuisines, "CuisinesId", "Name");

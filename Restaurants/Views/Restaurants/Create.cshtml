@@ -4,6 +4,8 @@
 
 @model Restaurant.Models.Restaurants
 
+<div class="container">
+
 <h4>Add a new task</h4>
 
 @using (Html.BeginForm())
@@ -17,3 +19,4 @@
     <input type="submit" value="Add new restaurant" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>
+</div>
