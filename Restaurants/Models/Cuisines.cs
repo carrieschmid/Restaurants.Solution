@@ -6,11 +6,13 @@ namespace Restaurant.Models
     {
         public Cuisines()
         {
-            this.Items = new HashSet<Item>();
+            this.Restaurants = new HashSet<Restaurants>();
         }
 
-        public int CategoryId { get; set; }
+        public int CusinesId { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Item> Items { get; set; }
+        public virtual ICollection<Restaurants> Restaurants { get; set; }
     }
 }
+
+
