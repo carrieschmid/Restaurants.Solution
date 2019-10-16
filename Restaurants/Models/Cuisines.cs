@@ -9,7 +9,7 @@ namespace Restaurant.Models
             this.Restaurants = new HashSet<Restaurants>();
         }
 
-        public int CusinesId { get; set; }
+        public int CuisinesId { get; set; }
         public string Name { get; set; }
         public virtual ICollection<Restaurants> Restaurants { get; set; }
     }

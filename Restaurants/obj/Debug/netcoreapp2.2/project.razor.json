@@ -2961,8 +2961,63 @@
   "RootNamespace": "Restaurants",
   "Documents": [
     {
+      "FilePath": "Views/Restaurants/Index.cshtml",
+      "TargetPath": "Views/Restaurants/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Restaurants/Delete.cshtml",
+      "TargetPath": "Views/Restaurants/Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Cuisines/Create.cshtml",
+      "TargetPath": "Views/Cuisines/Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Restaurants/Edit.cshtml",
+      "TargetPath": "Views/Restaurants/Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Cuisines/Edit.cshtml",
+      "TargetPath": "Views/Cuisines/Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Cuisines/Delete.cshtml",
+      "TargetPath": "Views/Cuisines/Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Home/Index.cshtml",
       "TargetPath": "Views/Home/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Restaurants/Create.cshtml",
+      "TargetPath": "Views/Restaurants/Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Cuisines/Details.cshtml",
+      "TargetPath": "Views/Cuisines/Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views/Shared/_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Cuisines/Index.cshtml",
+      "TargetPath": "Views/Cuisines/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Restaurants/Details.cshtml",
+      "TargetPath": "Views/Restaurants/Details.cshtml",
       "FileKind": "mvc"
     }
   ],
