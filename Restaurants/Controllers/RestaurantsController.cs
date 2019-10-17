@@ -99,6 +99,26 @@ namespace Restaurant.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult Review(string searchType, string value)
+        {
+            List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList();
+          
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Show(string review)
+        {
+            List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList();
+           
+            
+            model = model.Where(s => s.Description.Contains(review)).Select(s => s).ToList();
+    
+            return View("Show", model);
+        }
+
+
 
   }
 }

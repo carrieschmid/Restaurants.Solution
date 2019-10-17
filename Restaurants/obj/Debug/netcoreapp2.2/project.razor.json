@@ -2966,6 +2966,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Restaurants/Show.cshtml",
+      "TargetPath": "Views/Restaurants/Show.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Restaurants/Delete.cshtml",
       "TargetPath": "Views/Restaurants/Delete.cshtml",
       "FileKind": "mvc"
@@ -2978,6 +2983,11 @@
     {
       "FilePath": "Views/Restaurants/Edit.cshtml",
       "TargetPath": "Views/Restaurants/Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Restaurants/Review.cshtml",
+      "TargetPath": "Views/Restaurants/Review.cshtml",
       "FileKind": "mvc"
     },
     {
