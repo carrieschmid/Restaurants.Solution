@@ -17,27 +17,33 @@ namespace Restaurant.Controllers
       _db = db;
     }
 
-      [HttpPost]
-      public ActionResult Index(string restaurantDescription)
-        {
-            List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 
-            if (!String.IsNullOrEmpty(restaurantDescription)) 
-            { 
-                model = model.Where(s => s.Description.Contains(restaurantDescription)).Select(s => s).ToList(); 
-            }
-             return View(model);
-        }
+    //   [HttpPost]
+    //   public ActionResult Index(string restaurantDescription)
+    //     {
+    //         List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 
+    //         if (!String.IsNullOrEmpty(restaurantDescription)) 
+    //         { 
+    //             model = model.Where(s => s.Description.Contains(restaurantDescription)).Select(s => s).ToList(); 
+    //         }
+    //          return View(model);
+    //     }
         [HttpPost]
-      public ActionResult Index(int cuisines)
+      public ActionResult Index(string searchType, string value)
         {
-            Console.WriteLine(cuisines);
-            List<Restaurants> model  = _db.Restaurants.Where(restaurants => restaurants.CuisinesId == cuisines).ToList();
-            return View("Index" , model);
+            // Console.WriteLine(cuisines);
+            List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList();
+            if(searchType == "cuisine")
+            {
+                int cuisines = Int32.Parse(value);
+                model  = _db.Restaurants.Where(restaurants => restaurants.CuisinesId == cuisines).Select(cuisine => cuisine).ToList();
+            }
+            else{
+                model = model.Where(s => s.Description.Contains(value)).Select(s => s).ToList();
+            }
+            return View(model);
             
         } 
 
-
-        [HttpGet]
         public ActionResult Index()
         {
             List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 

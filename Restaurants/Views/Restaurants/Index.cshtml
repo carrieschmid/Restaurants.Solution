@@ -20,11 +20,11 @@
 }
 
 
-<form action= "" method="post">
+<form method="post">
     
     <label for="restaurantDescription">Search for Restaurants</label>
-    <input id="restaurantDescription" name="restaurantDescription" type="text">
-    <button type='submit'>Search</button>
+    <input id="restaurantDescription" name="value" type="text">
+    <button name="searchType" value="restaurant" type='submit'>Search</button>
 </form>
 
 
@@ -32,15 +32,14 @@
 <p>@Html.ActionLink("Add new restaurants", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
 
-<form action= "" method="post">
-    <select name = "cuisines">
+<form method="post">
+    <select name = "value">
     <option value= >Select a number</option>
     <option value ="3">mexican</option>
     <option value ="2">thai</option>
     <option value ="4">indian</option>
     </select>
-    <button type='submit'>Search</button>
+    <button name="searchType" value="cuisine" type='submit'>Search</button>
 </form>
-
 </div>
 
