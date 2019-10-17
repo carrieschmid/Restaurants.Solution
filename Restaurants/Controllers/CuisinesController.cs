@@ -3,6 +3,7 @@ using Restaurant.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Restaurant.Controllers
 {
@@ -14,6 +15,8 @@ namespace Restaurant.Controllers
     {
       _db = db;
     }
+            
+    [HttpGet]    
     public ActionResult Index()
     {
       List<Cuisines> model = _db.Cuisines.ToList();

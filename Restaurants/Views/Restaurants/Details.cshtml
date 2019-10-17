@@ -7,8 +7,11 @@
 
 <div class="container">
 <h2>Restaurant Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
+
+<h3>@Html.DisplayNameFor(model => model.Description): 
+  @Html.DisplayFor(model => model.Description)<h3>
+  <h3>@Html.DisplayNameFor(model => model.Address): 
+    @Html.DisplayFor(model => model.Address)</h3>
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RestaurantsId })</p>
 <p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.RestaurantsId })</p>

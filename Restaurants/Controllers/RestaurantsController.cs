@@ -21,31 +21,28 @@ namespace Restaurant.Controllers
       public ActionResult Index(string restaurantDescription)
         {
             List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 
-
- 
             if (!String.IsNullOrEmpty(restaurantDescription)) 
             { 
                 model = model.Where(s => s.Description.Contains(restaurantDescription)).Select(s => s).ToList(); 
             }
-
-            return View(model);
-          
-
+             return View(model);
         }
+        [HttpPost]
+      public ActionResult Index(int cuisines)
+        {
+            Console.WriteLine(cuisines);
+            List<Restaurants> model  = _db.Restaurants.Where(restaurants => restaurants.CuisinesId == cuisines).ToList();
+            return View("Index" , model);
+            
+        } 
 
 
         [HttpGet]
         public ActionResult Index()
         {
             List<Restaurants> model = _db.Restaurants.Include(restaurants => restaurants.Cuisines).ToList(); 
-
-         
             return View(model);
-          
-
         }
-
-
 
         public ActionResult Create()
         {
@@ -64,6 +61,7 @@ namespace Restaurant.Controllers
         public ActionResult Details(int id)
         {
             Restaurants thisRestaurants = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantsId == id);
+            Console.WriteLine(thisRestaurants);
             return View(thisRestaurants);
         }
          public ActionResult Delete(int id)

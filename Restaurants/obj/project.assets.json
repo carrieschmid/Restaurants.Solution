@@ -12159,11 +12159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/Restaurants.Solutions/Restaurants/Restaurants.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/Restaurants-MySQL/Restaurants/Restaurants.csproj",
       "projectName": "Restaurants",
-      "projectPath": "/Users/Guest/Desktop/Restaurants.Solutions/Restaurants/Restaurants.csproj",
+      "projectPath": "/Users/Guest/Desktop/Restaurants-MySQL/Restaurants/Restaurants.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
-      "outputPath": "/Users/Guest/Desktop/Restaurants.Solutions/Restaurants/obj/",
+      "outputPath": "/Users/Guest/Desktop/Restaurants-MySQL/Restaurants/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

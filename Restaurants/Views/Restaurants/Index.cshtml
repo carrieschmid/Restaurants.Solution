@@ -16,6 +16,7 @@
 @foreach (Restaurants restaurants in Model)
 {
   <li>@Html.ActionLink($"{restaurants.Description}", "Details", new { id = restaurants.RestaurantsId }) | @restaurants.Cuisines.Name</li>
+  <p>Address: @restaurants.Address</p>
 }
 
 
@@ -23,6 +24,21 @@
     
     <label for="restaurantDescription">Search for Restaurants</label>
     <input id="restaurantDescription" name="restaurantDescription" type="text">
+    <button type='submit'>Search</button>
+</form>
+
+
+
+<p>@Html.ActionLink("Add new restaurants", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+<form action= "" method="post">
+    <select name = "cuisines">
+    <option value= >Select a number</option>
+    <option value ="3">mexican</option>
+    <option value ="2">thai</option>
+    <option value ="4">indian</option>
+    </select>
     <button type='submit'>Search</button>
 </form>
 
